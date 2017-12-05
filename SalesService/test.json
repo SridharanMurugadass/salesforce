@@ -1,0 +1,11 @@
+{
+"id": "Id",
+"leadtype": "Leadtype",
+"status": "Status",
+"firstname": "Firstname",
+"lastname": "Lastname",
+"rating": "Rating",
+"phonenumber": "Phonenumber",
+"email": "Email",
+"winprobability": "Winprobability"
+}

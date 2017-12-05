@@ -1,0 +1,65 @@
+{"Id" :
+	[
+		{
+		"SalesName": "SalesID",
+		"ChartName": "ChartID",
+		"ColumnName": "id",
+		"Direction": "1"
+		},
+		{
+		"SalesName": "SalesLeadType",
+		"ChartName": "ChartLeadType",
+		"ColumnName": "leadtype",
+		"Direction": "1"
+		}
+		,
+		{
+		"SalesName": "Mobile",
+		"ChartName": "ChartPhone",
+		"ColumnName": "phonenumber",
+		"Direction": "1"
+		}
+		,
+		{
+		"SalesName": "SalesMail",
+		"ChartName": "ChartEmail",
+		"ColumnName": "email",
+		"Direction": "1"
+		}
+		,
+		{
+		"SalesName": "SalesRating",
+		"ChartName": "ChartRating",
+		"ColumnName": "rating",
+		"Direction": "1"
+		}
+		,
+		{
+		"SalesName": "SalesFirstName",
+		"ChartName": "ChartFirstName",
+		"ColumnName": "firstname",
+		"Direction": "1"
+		}
+		,
+		{
+		"SalesName": "SalesLastName",
+		"ChartName": "ChartLastName",
+		"ColumnName": "lastname",
+		"Direction": "1"
+		}
+		,
+		{
+		"SalesName": "SalesWinProbability",
+		"ChartName": "ChartWinProbability",
+		"ColumnName": "winprobability",
+		"Direction": "1"
+		}
+		,
+		{
+		"SalesName": "SalesStatus",
+		"ChartName": "ChartStatus",
+		"ColumnName": "status",
+		"Direction": "1"
+		}
+	]
+}

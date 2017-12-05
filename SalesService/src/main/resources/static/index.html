@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="serviceApp">
+   <head>
+      <title id='Description'>SalesForce ExternalSyatem Demo</title>
+      <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+      <meta name="viewport" content="width=device-width, initial-scale=5">
+      <link
+         href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"
+         rel="stylesheet">
+      <script
+         src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+      <script type="text/javascript"
+         src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+      <script src="bower_components/angular/angular.js"></script>
+      <script src="controller.js"></script>
+   </head>
+   <style>
+      /* changes for loader*/
+      .loader {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #000;
+      opacity: 0.5;
+      filter: alpha(opacity = 50);
+      z-index: 999;
+      }
+      .loaderimage {
+      border: 10px solid #f3f3f3;
+      border-radius: 50%;
+      border-top: 10px solid #3498db;
+      width: 100px;
+      height: 100px;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      -webkit-animation: spin 2s linear infinite;
+      animation: spin 2s linear infinite;
+      z-index: 1000;
+      }
+      @
+      -webkit-keyframes spin { 0% {
+      -webkit-transform: rotate(0deg);
+      }
+      100%
+      {
+      -webkit-transform
+      :
+      rotate
+      (360deg);
+      }
+      }
+      @
+      keyframes spin { 0% {
+      transform: rotate(0deg);
+      }
+      100%
+      {
+      transform
+      :
+      rotate
+      (360deg);
+      }
+      }
+   </style>
+   <body class='default'>
+      <div class="panel panel-info" ng-controller="controller">
+         <div class="panel-heading" ng-init="loadDocument()">
+            <h2 class="panel-title ">SalesForce Integration With External
+               System Demo
+            </h2>
+         </div>
+         <div class="panel-body">
+            <!-- changes for progress bar  -->
+            <div class="loader" style="display: none"></div>
+            <div class="loaderimage" style="display: none"></div>
+            <!-- changes for progress bar  -->
+            <div class="container">
+               <form ng-submit="addName()">
+                  <td>
+                  <tr>
+                     <div class="row">
+                        <div class="col-sm-1">
+                           <b> Sales Id</b>
+                        </div>
+                        <div class="col-sm-2">
+                           <input class="form-control" ng-model="form.id" readonly />
+                        </div>
+                        <div class="col-sm-1">
+                           <b> LeadType</b>
+                        </div>
+                        <div class="col-sm-2">
+                           <Select class="form-control" ng-model="form.leadtype"
+                              required="required">
+                              <option>Enterprise</option>
+                              <option>Residential</option>
+                              <option>Wholesale</option>
+                           </Select>
+                        </div>
+                        <div class="col-sm-1">
+                           <b> Status</b>
+                        </div>
+                        <div class="col-sm-2">
+                           <Select class="form-control" ng-model="form.status"
+                              required="required">
+                              <option>Open-NotContacted</option>
+                              <option>Working-Contacted</option>
+                              <option>Closed-Converted</option>
+                              <option>Closed-NotConverted</option>
+                           </Select>
+                        </div>
+                        <div class="col-sm-1">
+                           <b> FirstName</b>
+                        </div>
+                        <div class="col-sm-2">
+                           <input class="form-control" ng-model="form.firstname"
+                              required="required" />
+                        </div>
+                        </td>
+                  </tr>
+                  <br> <br>
+                  <div class="container">
+                  <tr>
+                  <td>
+                  <div class="row">
+                  <div class="col-sm-1">
+                  <b> LastName</b>
+                  </div>
+                  <div class="col-sm-2">
+                  <input class="form-control" ng-model="form.lastname"
+                     required="required" />
+                  </div>
+                  <div class="col-sm-1">
+                  <b> Rating</b>
+                  </div>
+                  <div class="col-sm-2">
+                  <Select class="form-control" ng-model="form.rating"
+                     required="required">
+                  <option>Hot</option>
+                  <option>Warm</option>
+                  <option>Cold</option>
+                  </Select>
+                  </div>
+                  <div class="col-sm-1">
+                  <b> Business Phone</b>
+                  </div>
+                  <div class="col-sm-2">
+                  <input class="form-control"
+                     ng-model="form.businessphoneNumber" required="required" />
+                  </div>
+                  <div class="col-sm-1">
+                  <b> Email</b>
+                  </div>
+                  <div class="col-sm-2">
+                  <input class="form-control" ng-model="form.email"
+                     required="required" />
+                  </div>
+                  </td>
+                  </tr>
+                  <br> <br>
+                  <td>
+                  <tr>
+                  <div class="col-sm-1">
+                  <b> Win Probability</b>
+                  </div>
+                  <div class="col-sm-2">
+                  <input class="form-control" ng-model="form.winprobability"
+                     required="required" />
+                  </div>
+                  </div>
+                  </td>
+                  </tr>
+                  <br>
+                  <div class="col-sm-1">
+                  <button type="submit" class="btn btn-info" ng-if="myVar">Create</button>
+                  </div>
+                  <div class="col-sm-1">
+                  <button type="submit" class="btn btn-info">Update</button>
+                  </div>
+                  <div class="col-sm-1">
+                  <button type="button" ng-click="deleteName(form.id)" class="btn btn-info">Delete</button>
+                  </div>
+                  <br>
+               </form>
+               </div>
+               </div>
+               <br> <br>
+               <div class="container">
+                  <table id="myTable" class="table table-striped">
+                     <thead>
+                        <tr>
+                           <th>Lead Id</th>
+                           <th>Lead Type</th>
+                           <th>Status</th>
+                           <th>FirstName</th>
+                           <th>LastName</th>
+                           <th>Rating</th>
+                           <th>Business Phone</th>
+                           <th>Email</th>
+                           <th>Win Probability</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr ng-repeat="jsonValue in json ">
+                           <td ng-click="editPage(jsonValue)" ng-disabled>{{jsonValue.id}}</td>
+                           <td>{{jsonValue.leadtype}}</td>
+                           <td>{{jsonValue.status}}</td>
+                           <td>{{jsonValue.firstname}}</td>
+                           <td>{{jsonValue.lastname}}</td>
+                           <td>{{jsonValue.rating}}</td>
+                           <td>{{jsonValue.businessphoneNumber}}</td>
+                           <td>{{jsonValue.email}}</td>
+                           <td>{{jsonValue.winprobability}}</td>
+                        <tr ng-repeat-end ng-hide="true"></tr>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+            </div>
+         </div>
+      </div>
+   </body>
+</html>
