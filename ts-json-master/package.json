@@ -1,0 +1,21 @@
+{
+  "name": "ts-json",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "prestart": "npm run tsc",
+    "start": "node app.js",
+    "tsc": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "2.1.4"
+  },
+  "dependencies": {
+    "traverse": "^0.6.6",
+    "typescript-rest": "^1.6.1"
+  }
+}

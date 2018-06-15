@@ -1,0 +1,99 @@
+	[
+         {
+    	"baseID": "123",
+    	"name": "Air Max 270 Flyknit",
+    	"description": "Lorem Ipsum dolor",
+    	"brand": "Nike",
+    	"gender": "Women",
+    	"family": "Footwear",
+    	"brand_image_url": "https://runnerspoint.scene7.com/is/image/rpe/Nike?$fl_launchcalendar_brand$",
+    	"products": [
+        	{
+            	"sku": "315245966502",
+            	"date": "2018-03-22 09:00:00",
+            	"image_url": "https://runnerspoint.scene7.com/is/image/rpe/315245966502_01?$fl_launchcalendar_product$",
+            	"color": "Clear Emerald / Black / Pure Platinum",
+            	"deeplinks": {
+                	"276": "https://www.footlocker.de/de/p/nike-air-max-270-flyknit-damen-schuhe-63670?v=315245966502",
+	                "578": "https://www.footlocker.no/en/p/nike-air-max-270-flyknit-women-shoes-63670?v=315245966502"
+            	},
+            	"prices": [
+                	{
+                        "country_code": "276",
+                    	"currency": "EUR",
+                        "price": "169.99"
+                	},
+                	{
+                        "country_code": "578",
+                        "currency": "NOK",
+                        "price": "1699.00"
+               	 }
+            	],
+            	"sizes": [
+                	{
+                        "size_code": "060",
+                    	"UK": "3.5",
+                    	"EUR": "36.5",
+                    	"US": "6"
+                	},
+    	            {
+                        "size_code": "065",
+                    	"UK": "4",
+                    	"EUR": "37.5",
+                    	"US": "6.5"
+                	}
+            	]
+        	}
+    	]
+	},
+	{
+    	"baseID": "456",
+    	"name": "Fenty Cleated Creeper",
+    	"description": "Lorem Ipsum dolor",
+    	"brand": "Puma",
+    	"gender": "Women",
+    	"family": "Footwear",
+    	"brand_image_url": "https://runnerspoint.scene7.com/is/image/rpe/Puma?$fl_launchcalendar_brand$",
+    	"products": [
+        	{
+            	"sku": "315348609702",
+            	"date": "2018-03-15 09:00:00",
+            	"image_url": "https://runnerspoint.scene7.com/is/image/rpe/315348609702_01?$fl_launchcalendar_product$",
+            	"color": "Blue / Green / White",
+            	"deeplinks": {
+                	"276": "https://www.footlocker.de/de/p/puma-fenty-cleated-creeper-damen-schuhe-46950?v=315348609702",
+                	"578": "https://www.footlocker.no/en/p/puma-fenty-cleated-creeper-women-shoes-46950?v=315348609702"
+            	},
+            	"prices": [
+                	{
+                        "country_code": "276",
+                        "currency": "EUR",
+         	           "price": "159.99"
+                	},
+                	{
+                        "country_code": "578",
+                        "currency": "NOK",
+                        "price": "1599.00"
+                	}
+            	],
+    	        "sizes": [
+                	{
+                        "size_code": "055",
+                    	"UK": "3",
+                    	"EUR": "35.5",
+                    	"US": "5.5"
+                	},
+                	{
+            	        "size_code": "060",
+                    	"UK": "3.5",
+                    	"EUR": "36",
+                    	"US": "6"
+                	}
+            	]
+        	}
+    	]
+    }
+]
+
+
+
